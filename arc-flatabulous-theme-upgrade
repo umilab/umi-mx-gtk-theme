@@ -99,7 +99,7 @@ install_theme() {
       case $response in
         [yY][eE][sS]|[yY])
           echo "Installing $(basename $0) on /usr/bin/"
-          cp -r arc-theme-upgrade /usr/bin/
+          cp -r arc-flatabulous-theme-upgrade /usr/bin/
           ;;
         *)
           echo "Aborted by user"
@@ -121,9 +121,9 @@ install_theme() {
 
 # Main part
 clear
-echo '####################################'
-echo '#     Arc Theme Install Script     #'
-echo '####################################'
+echo '################################################'
+echo '#     Arc-Flatabulous Theme Install Script     #'
+echo '################################################'
 echo
 
 #Check available commands
