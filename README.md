@@ -133,6 +133,7 @@ If you get artifacts like black or invisible backgrounds under Unity, disable ov
 
 ### Full Preview
 ![A full screenshot of the Arc theme](http://i.imgur.com/4JSTAFB.jpg)
+<sub>Screenshot Details: Icons: [Numix Circle](https://github.com/numixproject/numix-icon-theme-circle) | [Wallpaper](https://github.com/GNOME/gnome-backgrounds/blob/master/backgrounds/Waves.jpg) | Font: [Source Sans Pro](https://github.com/adobe-fonts/source-sans-pro)</sub>
 
 
 ### Credits
