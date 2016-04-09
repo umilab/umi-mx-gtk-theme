@@ -3,7 +3,7 @@ AC_INIT(
     [20160331],
     [https://github.com/horst3180/Arc-theme/issues],
     [arc-theme],
-    [https://github.com/horst3180/Arc-theme],
+    [https://github.com/andreisergiu98/arc-flatabulous-theme],
     []
 )
 

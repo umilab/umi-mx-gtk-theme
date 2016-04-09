@@ -1,20 +1,22 @@
-# Arc Theme
+# Arc-Flatabulous Theme
+Arc-Flatabulous theme is the arc theme with mac like window controls theme.
+[Arc](https://github.com/horst3180/arc-theme) is a flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell which supports GTK 3 and GTK 2 based desktop environments like Gnome, Unity, Budgie, Pantheon, XFCE, Mate, etc.
+[Flatabulous](https://github.com/anmoljagetia/Flatabulous) is a flat theme for Ubuntu and other debian based Linux Systems, it is based on a the Ultra-Flat theme.
 
-Arc is a flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell which supports GTK 3 and GTK 2 based desktop environments like Gnome, Unity, Budgie, Pantheon, XFCE, Mate, etc.
 
 ###Arc is available in three variants 
 
 #####Arc
 
-![A screenshot of the Arc theme](http://i.imgur.com/Ph5ObOa.png)
+![A screenshot of the Arc theme](http://i.imgur.com/sGOEK6L.png)
 
 #####Arc-Darker
 
-![A screenshot of the Arc-Darker theme](http://i.imgur.com/NC6dqyl.png)
+![A screenshot of the Arc-Darker theme](http://i.imgur.com/zUC1pHT.png)
 
 #####Arc-Dark
 
-![A screenshot of the Arc-Dark theme](http://i.imgur.com/5AGlCnA.png)
+![A screenshot of the Arc-Dark theme](http://i.imgur.com/gneZsVQ.png)
 
 
 ### Requirements
@@ -52,23 +54,7 @@ If your distribution isn't listed, please check the requirements yourself.
 
 #### Packages
 
-Prebuilt packages for Ubuntu, Debian, Fedora and openSUSE are available at  
-http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-theme  
-
-A non-transparent version of the theme is available here  
-http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-theme-solid  
-
-**Note:** elementary OS Freya users can install the package for Ubuntu 15.04
-
---
-
-Arch Linux users can install the theme from the AUR
-
-**Official Releases**: https://aur.archlinux.org/packages/gtk-theme-arc/  
-
-**Development Releases**: https://aur.archlinux.org/packages/gtk-theme-arc-git/  
-
-**Note:** If you're having trouble with the AUR packages please email the package maintainer at zach@zach-adams.com before creating an issue.
+None yet.
 
 #### Manual Installation
 
@@ -153,5 +139,5 @@ If you get artifacts like black or invisible backgrounds under Unity, disable ov
 If you find a bug, please report it at https://github.com/horst3180/arc-theme/issues
 
 ### Full Preview
-![A full screenshot of the Arc theme](http://i.imgur.com/tD1OBQ3.png)
-<sub>Screenshot Details: Icons: unreleased | Launcher Icons based on [White Pixel Icons](http://darkdawg.deviantart.com/art/White-Pixel-Icons-252310560) | [Wallpaper](https://pixabay.com/photo-869593/) | Font: Futura Bk bt</sub>
+![A full screenshot of the Arc theme](http://i.imgur.com/4JSTAFB.jpg)
+
