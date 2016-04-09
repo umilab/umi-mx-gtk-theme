@@ -1,22 +1,17 @@
 # Arc-Flatabulous Theme
-Arc-Flatabulous theme is the Arc theme with mac like window controls theme.
+Arc-Flatabulous theme is the [Arc](https://github.com/horst3180/arc-theme) theme with [Flatabulous](https://github.com/anmoljagetia/Flatabulous) window controls.
 
-[Arc](https://github.com/horst3180/arc-theme) is a flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell which supports GTK 3 and GTK 2 based desktop environments like Gnome, Unity, Budgie, Pantheon, XFCE, Mate, etc.
+###Arc-Flatabulous is available in three variants 
 
-[Flatabulous](https://github.com/anmoljagetia/Flatabulous) is a flat theme for Ubuntu and other debian based Linux Systems, it is based on a the Ultra-Flat theme.
-
-
-###Arc is available in three variants 
-
-#####Arc
+#####Arc-Flatabulous
 
 ![A screenshot of the Arc theme](http://i.imgur.com/sGOEK6L.png)
 
-#####Arc-Darker
+#####Arc-Flatabulous-Darker
 
 ![A screenshot of the Arc-Darker theme](http://i.imgur.com/zUC1pHT.png)
 
-#####Arc-Dark
+#####Arc-Flatabulous-Dark
 
 ![A screenshot of the Arc-Dark theme](http://i.imgur.com/gneZsVQ.png)
 
@@ -75,12 +70,12 @@ Install the theme with the following commands
 
 If you want to install the latest version from git, clone the repository with
 
-    `git clone https://github.com/andreisergiu98/arc-flatabulous-theme && cd arc-theme`
+    git clone https://github.com/andreisergiu98/arc-flatabulous-theme && cd arc-theme
 
 **2. Build and install the theme**
 
-    `./autogen.sh --prefix=/usr`
-    `sudo make install`
+    ./autogen.sh --prefix=/usr
+    sudo make install
 
 Other options to pass to autogen.sh are
 
@@ -107,11 +102,11 @@ After the installation is complete you can activate the theme with `gnome-tweak-
 
 Run
 
-    `sudo make uninstall`
+    sudo make uninstall
 
 from the same directory as this README resides in, or
 
-    `sudo rm -rf /usr/share/themes/{Arc-Flatabulous,Arc-Flatabulous-Darker,Arc-Flatabulous-Dark}`
+    sudo rm -rf /usr/share/themes/{Arc-Flatabulous,Arc-Flatabulous-Darker,Arc-Flatabulous-Dark}
 
 ### Extras
 
@@ -136,10 +131,11 @@ If you get artifacts like black or invisible backgrounds under Unity, disable ov
 
     gsettings set com.canonical.desktop.interface scrollbar-mode normal
 
-
-### Bug reporting
-If you find a bug, please report it at https://github.com/horst3180/arc-theme/issues
-
 ### Full Preview
 ![A full screenshot of the Arc theme](http://i.imgur.com/4JSTAFB.jpg)
+
+
+### Credits
+	horst3180 for creating the [Arc](https://github.com/horst3180/arc-theme) theme.
+	Anmol Jagetia for creating the [Flatabulous](https://github.com/anmoljagetia/Flatabulous) theme.
 
