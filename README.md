@@ -136,6 +136,6 @@ If you get artifacts like black or invisible backgrounds under Unity, disable ov
 
 
 ### Credits
-	horst3180 for creating the [Arc](https://github.com/horst3180/arc-theme) theme.
-	Anmol Jagetia for creating the [Flatabulous](https://github.com/anmoljagetia/Flatabulous) theme.
+* **horst3180** for creating the [Arc](https://github.com/horst3180/arc-theme) theme.
+* **Anmol Jagetia** for creating the [Flatabulous](https://github.com/anmoljagetia/Flatabulous) theme.
 
