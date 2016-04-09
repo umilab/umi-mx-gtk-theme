@@ -1,6 +1,8 @@
 # Arc-Flatabulous Theme
-Arc-Flatabulous theme is the arc theme with mac like window controls theme.
+Arc-Flatabulous theme is the Arc theme with mac like window controls theme.
+
 [Arc](https://github.com/horst3180/arc-theme) is a flat theme with transparent elements for GTK 3, GTK 2 and Gnome-Shell which supports GTK 3 and GTK 2 based desktop environments like Gnome, Unity, Budgie, Pantheon, XFCE, Mate, etc.
+
 [Flatabulous](https://github.com/anmoljagetia/Flatabulous) is a flat theme for Ubuntu and other debian based Linux Systems, it is based on a the Ultra-Flat theme.
 
 
@@ -48,9 +50,9 @@ If your distribution isn't listed, please check the requirements yourself.
 
 **Important:** Remove all older versions of the theme from your system before you proceed any further.
 
-    sudo rm -rf /usr/share/themes/{Arc,Arc-Darker,Arc-Dark}
-    rm -rf ~/.local/share/themes/{Arc,Arc-Darker,Arc-Dark}
-    rm -rf ~/.themes/{Arc,Arc-Darker,Arc-Dark}
+    sudo rm -rf /usr/share/themes/{Arc-Flatabulous,Arc-Flatabulous-Darker,Arc-Flatabulous-Dark}
+    rm -rf ~/.local/share/themes/{Arc-Flatabulous,Arc-Flatabulous-Darker,Arc-Flatabulous-Dark}
+    rm -rf ~/.themes/{Arc-Flatabulous,Arc-Flatabulous-Darker,Arc-Flatabulous-Dark}
 
 #### Packages
 
@@ -73,12 +75,12 @@ Install the theme with the following commands
 
 If you want to install the latest version from git, clone the repository with
 
-    git clone https://github.com/horst3180/arc-theme --depth 1 && cd arc-theme
+    `git clone https://github.com/andreisergiu98/arc-flatabulous-theme && cd arc-theme`
 
 **2. Build and install the theme**
 
-    ./autogen.sh --prefix=/usr
-    sudo make install
+    `./autogen.sh --prefix=/usr`
+    `sudo make install`
 
 Other options to pass to autogen.sh are
 
@@ -105,11 +107,11 @@ After the installation is complete you can activate the theme with `gnome-tweak-
 
 Run
 
-    sudo make uninstall
+    `sudo make uninstall`
 
 from the same directory as this README resides in, or
 
-    sudo rm -rf /usr/share/themes/{Arc,Arc-Darker,Arc-Dark}
+    `sudo rm -rf /usr/share/themes/{Arc-Flatabulous,Arc-Flatabulous-Darker,Arc-Flatabulous-Dark}`
 
 ### Extras
 
