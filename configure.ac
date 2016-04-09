@@ -1,8 +1,8 @@
 AC_INIT(
-    [arc-theme],
+    [arc-flatabulous-theme],
     [20160331],
-    [https://github.com/horst3180/Arc-theme/issues],
-    [arc-theme],
+    [https://github.com/andreisergiu98/arc-flatabulous-theme/issues],
+    [arc-flatabulous-theme],
     [https://github.com/andreisergiu98/arc-flatabulous-theme],
     []
 )

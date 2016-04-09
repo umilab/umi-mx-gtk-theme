@@ -96,7 +96,7 @@ Other options to pass to autogen.sh are
                                Note: Normally the correct version is detected automatically and this
                                option should not be needed.
 
-After the installation is complete you can activate the theme with `gnome-tweak-tool` or a similar program by selecting `Arc`, `Arc-Darker` or `Arc-Dark` as Window/GTK+ theme and `Arc` or `Arc-Dark` as Gnome-Shell and Xfce-Notify theme.
+After the installation is complete you can activate the theme with `gnome-tweak-tool` or a similar program by selecting `Arc-Flatabulous`, `Arc-Flatabulous-Darker` or `Arc-Flatabulous-Dark` as Window/GTK+ theme and `Arc-Flatabulous` or `Arc-Flatabulous-Dark` as Gnome-Shell and Xfce-Notify theme.
 
 **Uninstall the theme**
 
@@ -130,6 +130,9 @@ This is also true for other distros with a different GTK/Gnome version than the 
 If you get artifacts like black or invisible backgrounds under Unity, disable overlay scrollbars with
 
     gsettings set com.canonical.desktop.interface scrollbar-mode normal
+
+### Bug reporting
+If you find a bug, please report it at https://github.com/andreisergiu98/arc-flatabulous-theme/issues
 
 ### Full Preview
 ![A full screenshot of the Arc theme](http://i.imgur.com/4JSTAFB.jpg)
