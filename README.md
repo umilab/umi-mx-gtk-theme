@@ -9,11 +9,11 @@ Arc-Flatabulous theme is the [Arc](https://github.com/horst3180/arc-theme) theme
 
 #####Arc-Flatabulous-Darker
 
-![A screenshot of the Arc-Darker theme](http://i.imgur.com/zUC1pHT.png)
+![A screenshot of the Arc-Darker theme](http://i.imgur.com/gneZsVQ.png)
 
 #####Arc-Flatabulous-Dark
 
-![A screenshot of the Arc-Dark theme](http://i.imgur.com/gneZsVQ.png)
+![A screenshot of the Arc-Dark theme](http://i.imgur.com/zUC1pHT.png)
 
 
 ### Requirements
