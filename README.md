@@ -70,7 +70,7 @@ Install the theme with the following commands
 
 If you want to install the latest version from git, clone the repository with
 
-    git clone https://github.com/andreisergiu98/arc-flatabulous-theme && cd arc-flatabulos-theme
+    git clone https://github.com/andreisergiu98/arc-flatabulous-theme && cd arc-flatabulous-theme
 
 **2. Build and install the theme**
 
