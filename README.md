@@ -51,8 +51,8 @@ If your distribution isn't listed, please check the requirements yourself.
 
 #### Packages
 
-None yet.
-
+Arch Linux users can install the theme from the AUR https://aur.archlinux.org/packages/gtk-arc-flatabulous-theme-git/
+	
 #### Manual Installation
 
 To build the theme you'll need 
