@@ -1374,7 +1374,7 @@ column-header .button, column-header .button:hover, column-header .button:active
   .menubar:backdrop {
     color: rgba(82, 93, 118, 0.5); }
   .menubar > .menuitem {
-    padding: 6px 8px;
+    padding: 4px 8px;
     border: solid transparent;
     border-width: 0; }
     .menubar > .menuitem:hover {
@@ -2752,9 +2752,6 @@ NautilusQueryEditor .search-bar.toolbar, NautilusQueryEditor .search-bar.inline-
     background-color: #edeef0;
     border-color: #d0d5da; }
 
-NautilusListView .view {
-  border-bottom: 1px solid #dcdfe3; }
-
 NemoWindow .sidebar .frame {
   border-width: 0; }
 
@@ -3092,7 +3089,9 @@ ClockBox {
   color: #BAC3CF; }
 
 .xfce4-panel.panel {
-  background-color: #2b2e37; }
+  background-color: #2b2e37;
+  text-shadow: none;
+  icon-shadow: none; }
   .xfce4-panel.panel .button.flat, .xfce4-panel.panel .sidebar-button.button {
     color: #BAC3CF;
     background-color: rgba(43, 46, 55, 0);
@@ -4004,6 +4003,7 @@ MarlinViewWindow .source-list.sidebar.view .scrollbar .slider, GeditFileBrowserW
 @define-color error_color #FC4138;
 @define-color success_color #73d216;
 @define-color placeholder_text_color #A8A8A8;
+@define-color link_color #2679db;
 @define-color content_view_bg #ffffff;
 @define-color wm_title alpha(#525d76, 0.8);
 @define-color wm_unfocused_title alpha(#525d76, 0.5);
