@@ -1,6 +1,6 @@
 AC_INIT(
     [arc-flatabulous-theme],
-    [20160331],
+    [20160570],
     [https://github.com/andreisergiu98/arc-flatabulous-theme/issues],
     [arc-flatabulous-theme],
     [https://github.com/andreisergiu98/arc-flatabulous-theme],
@@ -22,7 +22,6 @@ ARC_ENABLE([GTK3],          [gtk3],          [GTK3],          [disable])
 ARC_ENABLE([METACITY],      [metacity],      [Metacity],      [disable])
 ARC_ENABLE([UNITY],         [unity],         [Unity],         [disable])
 ARC_ENABLE([XFWM],          [xfwm],          [XFWM],          [disable])
-ARC_ENABLE([XFCE_NOTIFY],   [xfce-notify],   [XFCE Notify],   [disable])
 ARC_ENABLE([TRANSPARENCY],  [transparency],  [transparency],  [disable])
 
 ARC_GNOME
