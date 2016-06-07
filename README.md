@@ -112,6 +112,9 @@ from the same directory as this README resides in, or
 #### Arc Firefox theme
 A theme for Firefox is available at https://github.com/horst3180/arc-firefox-theme
 
+#### Arc icon theme
+The Arc icon theme is available at https://github.com/horst3180/arc-icon-theme
+
 #### Chrome/Chromium theme
 To install the Chrome/Chromium theme go to the `extra/Chrome` folder and drag and drop the arc-theme.crx or arc-dark-theme.crx file into the Chrome/Chromium window. The source of the Chrome themes is located in the source "Chrome/arc-theme" folder.
 
@@ -137,7 +140,7 @@ If you get artifacts like black or invisible backgrounds under Unity, disable ov
 If you find a bug, please report it at https://github.com/andreisergiu98/arc-flatabulous-theme/issues
 
 ### Full Preview
-![A full screenshot of the Arc theme](http://i.imgur.com/4JSTAFB.jpg)
+![A full screenshot of the Arc-Flatabulous theme](http://i.imgur.com/4JSTAFB.jpg)
 <sub>Screenshot Details: Icons: [Numix Circle](https://github.com/numixproject/numix-icon-theme-circle) | [Wallpaper](https://github.com/GNOME/gnome-backgrounds/blob/master/backgrounds/Waves.jpg) | Font: [Source Sans Pro](https://github.com/adobe-fonts/source-sans-pro)</sub>
 
 
