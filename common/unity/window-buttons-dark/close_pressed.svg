@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="12"
-   height="13"
+   width="24"
+   height="24"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="close_unfocussed.svg">
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="close_pressed.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -25,8 +25,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="22.627417"
-     inkscape:cx="8.1727918"
-     inkscape:cy="6.4146286"
+     inkscape:cx="2.383355"
+     inkscape:cy="17.02123"
      inkscape:document-units="px"
      inkscape:current-layer="g4092"
      showgrid="true"
@@ -34,11 +34,15 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1280"
-     inkscape:window-height="751"
+     inkscape:window-width="1920"
+     inkscape:window-height="1025"
      inkscape:window-x="0"
-     inkscape:window-y="24"
-     inkscape:window-maximized="1" />
+     inkscape:window-y="27"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3341" />
+  </sodipodi:namedview>
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -55,7 +59,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-671.14288,-651.57648)">
+     transform="translate(-671.14288,-640.57648)">
     <g
        transform="matrix(0.1265625,0,0,-0.1265625,672.07092,663.09636)"
        inkscape:label="ink_ext_XXXXXX"
@@ -64,7 +68,7 @@
          transform="scale(0.1,0.1)"
          id="g4092">
         <g
-           transform="matrix(9.9999999,0,0,9.9999999,0.33000657,-5.0769914)"
+           transform="matrix(12.8,0,0,12.8,320.58639,271.7479)"
            inkscape:label="ink_ext_XXXXXX"
            id="g4240">
           <g
