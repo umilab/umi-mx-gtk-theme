@@ -139,6 +139,9 @@ If you get artifacts like black or invisible backgrounds under Unity, disable ov
 ### Bug reporting
 If you find a bug, please report it at https://github.com/andreisergiu98/arc-flatabulous-theme/issues
 
+### License
+Arc is available under the terms the GPL-3.0. See `COPYING` for details.
+
 ### Full Preview
 ![A full screenshot of the Arc-Flatabulous theme](http://i.imgur.com/4JSTAFB.jpg)
 <sub>Screenshot Details: Icons: [Numix Circle](https://github.com/numixproject/numix-icon-theme-circle) | [Wallpaper](https://github.com/GNOME/gnome-backgrounds/blob/master/backgrounds/Waves.jpg) | Font: [Source Sans Pro](https://github.com/adobe-fonts/source-sans-pro)</sub>
