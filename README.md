@@ -18,7 +18,7 @@ Arc-Flatabulous theme is the [Arc](https://github.com/horst3180/arc-theme) theme
 
 ### Requirements
 
-* Gnome/GTK 3.14, 3.16, 3.18 or 3.20
+* Gnome/GTK3 3.14 - 3.22
 * The `gnome-themes-standard` package
 * The murrine engine. This has different names depending on your distro.
   * `gtk-engine-murrine` (Arch Linux)
@@ -30,11 +30,11 @@ Arc-Flatabulous theme is the [Arc](https://github.com/horst3180/arc-theme) theme
 Main distributions that meet these requirements are
 
 * Arch Linux and Arch Linux based distros
-* Ubuntu 15.04, 15.10 and 16.04 (**Ubuntu 14.04 and 14.10 are not supported**)
-* elementary OS Freya
+* Ubuntu 15.04 or newer (**Ubuntu 14.04 and 14.10 are not supported**)
+* elementary OS Freya/Loki
 * Debian 8, Testing or Unstable
 * Gentoo
-* Fedora 21 - 24
+* Fedora 21 or newer
 * openSUSE 13.2, Leap 42.1 and Tumbleweed
 
 Derivatives of these distributions should work, as well.
@@ -62,7 +62,7 @@ To build the theme you'll need
 * `libgtk-3-dev` for Debian based distros or `gtk3-devel` for RPM based distros
 * `git` if you want to clone the source directory
 
-If your distributions doesn't ship separate development packages you just need GTK 3 instead of the `-dev` packages.
+If your distribution doesn't ship separate development packages you just need GTK 3 instead of the `-dev` packages.
 
 Install the theme with the following commands
 
@@ -130,14 +130,15 @@ The Arc Dark theme for the Ubuntu Software Center by [mervick](https://github.co
 If you have Ubuntu with a newer GTK/Gnome version than the one included by default (i.e Ubuntu 14.04 with GTK 3.14 or Ubuntu 15.04 with GTK 3.16, etc.) the prebuilt packages won't work properly and you have to install the theme manually as described above.
 This is also true for other distros with a different GTK/Gnome version than the one included by default
 
---
 
 If you get artifacts like black or invisible backgrounds under Unity, disable overlay scrollbars with
 
     gsettings set com.canonical.desktop.interface scrollbar-mode normal
 
+
 ### Bug reporting
 If you find a bug, please report it at https://github.com/andreisergiu98/arc-flatabulous-theme/issues
+
 
 ### License
 Arc is available under the terms the GPL-3.0. See `COPYING` for details.
@@ -150,4 +151,5 @@ Arc is available under the terms the GPL-3.0. See `COPYING` for details.
 ### Credits
 * **horst3180** for creating the [Arc](https://github.com/horst3180/arc-theme) theme.
 * **Anmol Jagetia** for creating the [Flatabulous](https://github.com/anmoljagetia/Flatabulous) theme.
+
 

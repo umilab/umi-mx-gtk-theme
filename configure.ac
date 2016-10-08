@@ -1,6 +1,6 @@
 AC_INIT(
     [arc-flatabulous-theme],
-    [20160605],
+    [20161005],
     [https://github.com/andreisergiu98/arc-flatabulous-theme/issues],
     [arc-flatabulous-theme],
     [https://github.com/andreisergiu98/arc-flatabulous-theme],
@@ -24,7 +24,7 @@ ARC_ENABLE([UNITY],         [unity],         [Unity],         [disable])
 ARC_ENABLE([XFWM],          [xfwm],          [XFWM],          [disable])
 ARC_ENABLE([TRANSPARENCY],  [transparency],  [transparency],  [disable])
 
-ARC_GNOME
+AS_IF([test "x$ENABLE_GNOME_SHELL$ENABLE_GTK3" != xnono], [ARC_GNOME])
 
 AC_CONFIG_FILES([
     common/Makefile
