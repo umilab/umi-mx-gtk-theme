@@ -1,6 +1,6 @@
 AC_INIT(
     [arc-flatabulous-theme],
-    [20161005],
+    [20161119],
     [https://github.com/andreisergiu98/arc-flatabulous-theme/issues],
     [arc-flatabulous-theme],
     [https://github.com/andreisergiu98/arc-flatabulous-theme],
