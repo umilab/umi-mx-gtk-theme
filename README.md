@@ -1,17 +1,17 @@
 # Arc-Flatabulous Theme
 Arc-Flatabulous theme is the [Arc](https://github.com/horst3180/arc-theme) theme with [Flatabulous](https://github.com/anmoljagetia/Flatabulous) window controls.
 
-###Arc-Flatabulous is available in three variants 
+### Arc-Flatabulous is available in three variants 
 
-#####Arc-Flatabulous
+##### Arc-Flatabulous
 
 ![A screenshot of the Arc theme](http://i.imgur.com/sGOEK6L.png)
 
-#####Arc-Flatabulous-Darker
+##### Arc-Flatabulous-Darker
 
 ![A screenshot of the Arc-Darker theme](http://i.imgur.com/gneZsVQ.png)
 
-#####Arc-Flatabulous-Dark
+##### Arc-Flatabulous-Dark
 
 ![A screenshot of the Arc-Dark theme](http://i.imgur.com/zUC1pHT.png)
 
