@@ -15,7 +15,6 @@ Arc-Flatabulous theme is the [Arc](https://github.com/horst3180/arc-theme) theme
 
 ![A screenshot of the Arc-Dark theme](http://i.imgur.com/zUC1pHT.png)
 
-
 ### Requirements
 
 * Gnome/GTK3 3.14 - 3.22
@@ -37,17 +36,15 @@ Main distributions that meet these requirements are
 * Fedora 21 or newer
 * openSUSE 13.2, Leap 42.1 and Tumbleweed
 
-Derivatives of these distributions should work, as well.
-
 If your distribution isn't listed, please check the requirements yourself.
 
 ### Installation
 
 **Important:** Remove all older versions of the theme from your system before you proceed any further.
-
-    sudo rm -rf /usr/share/themes/{Arc-Flatabulous,Arc-Flatabulous-Darker,Arc-Flatabulous-Dark}
-    rm -rf ~/.local/share/themes/{Arc-Flatabulous,Arc-Flatabulous-Darker,Arc-Flatabulous-Dark}
-    rm -rf ~/.themes/{Arc-Flatabulous,Arc-Flatabulous-Darker,Arc-Flatabulous-Dark}
+	
+    sudo rm -rf /usr/share/themes/{Arc-Flatabulous,Arc-Flatabulous-Darker,Arc-Flatabulous-Dark,Arc-Flatabulous-Solid,Arc-Flatabulous-Darker-Solid,Arc-Flatabulous-Dark-Solid}
+    rm -rf ~/.local/share/themes/{Arc-Flatabulous,Arc-Flatabulous-Darker,Arc-Flatabulous-Dark,Arc-Flatabulous-Solid,Arc-Flatabulous-Darker-Solid,Arc-Flatabulous-Dark-Solid}
+    rm -rf ~/.themes/{Arc-Flatabulous,Arc-Flatabulous-Darker,Arc-Flatabulous-Dark,Arc-Flatabulous-Solid,Arc-Flatabulous-Darker-Solid,Arc-Flatabulous-Dark-Solid}
 
 #### Packages
 
@@ -58,11 +55,21 @@ Arch Linux users can install the theme from the AUR https://aur.archlinux.org/pa
 To build the theme you'll need 
 * `autoconf`
 * `automake`
-* `pkg-config` or `pkgconfig` if you use Fedora
+* `pkg-config` or `pkgconfig` for Fedora
 * `libgtk-3-dev` for Debian based distros or `gtk3-devel` for RPM based distros
-* `git` if you want to clone the source directory
+* `git` to clone the source directory
 
-If your distribution doesn't ship separate development packages you just need GTK 3 instead of the `-dev` packages.
+**Note:** For distributions which don't ship separate development packages, just the GTK 3 package is needed instead of the `-dev` packages.
+
+For the theme to function properly, install the following
+* GNOME Shell 3.14 - 3.24, GTK 3.14 - 3.22
+* The `gnome-themes-standard` package
+* The murrine engine. This has different names depending on the distro.
+  * `gtk-engine-murrine` (Arch Linux)
+  * `gtk2-engines-murrine` (Debian, Ubuntu, elementary OS)
+  * `gtk-murrine-engine` (Fedora)
+  * `gtk2-engine-murrine` (openSUSE)
+  * `gtk-engines-murrine` (Gentoo)
 
 Install the theme with the following commands
 
@@ -91,11 +98,15 @@ Other options to pass to autogen.sh are
     --disable-unity            disable Unity support
     --disable-xfwm             disable XFWM support
 
-    --with-gnome=<version>     build the theme for a specific Gnome version (3.14, 3.16, 3.18, 3.20)
-                               Note: Normally the correct version is detected automatically and this
+    --with-gnome=<version>     build the theme for a specific GNOME version (3.14, 3.16, 3.18, 3.20, 3.22)
+                               Note 1: Normally the correct version is detected automatically and this
                                option should not be needed.
+                               Note 2: For GNOME 3.24, use --with-gnome-version=3.22
+                               (this works for now, the build system will be improved in the future)
 
 After the installation is complete you can activate the theme with `gnome-tweak-tool` or a similar program by selecting `Arc-Flatabulous`, `Arc-Flatabulous-Darker` or `Arc-Flatabulous-Dark` as Window/GTK+ theme and `Arc-Flatabulous` or `Arc-Flatabulous-Dark` as Gnome-Shell and Xfce-Notify theme.
+
+If the `--disable-transparency` option was used, the theme will be installed as `Arc-solid`, `Arc-Darker-solid` and `Arc-Dark-solid`.
 
 **Uninstall the theme**
 
@@ -105,7 +116,7 @@ Run
 
 from the same directory as this README resides in, or
 
-    sudo rm -rf /usr/share/themes/{Arc-Flatabulous,Arc-Flatabulous-Darker,Arc-Flatabulous-Dark}
+    sudo rm -rf /usr/share/themes/{Arc-Flatabulous,Arc-Flatabulous-Darker,Arc-Flatabulous-Dark,Arc-Flatabulous-Solid,Arc-Flatabulous-Darker-Solid,Arc-Flatabulous-Dark-Solid}
 
 ### Extras
 
@@ -127,8 +138,8 @@ The Arc Dark theme for the Ubuntu Software Center by [mervick](https://github.co
 
 ### Troubleshooting
 
-If you have Ubuntu with a newer GTK/Gnome version than the one included by default (i.e Ubuntu 14.04 with GTK 3.14 or Ubuntu 15.04 with GTK 3.16, etc.) the prebuilt packages won't work properly and you have to install the theme manually as described above.
-This is also true for other distros with a different GTK/Gnome version than the one included by default
+If you use Ubuntu with a newer GTK/GNOME version than the one included by default (i.e Ubuntu 14.04 with GTK 3.14 or Ubuntu 15.04 with GTK 3.16, etc.) the prebuilt packages won't work properly and the theme has to be installed manually as described above.
+This is also true for other distros with a different GTK/GNOME version than the one included by default
 
 
 If you get artifacts like black or invisible backgrounds under Unity, disable overlay scrollbars with
