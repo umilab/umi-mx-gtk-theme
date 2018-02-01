@@ -5,15 +5,15 @@ Arc-Flatabulous theme is the [Arc](https://github.com/horst3180/arc-theme) theme
 
 ##### Arc-Flatabulous
 
-![A screenshot of the Arc theme](http://i.imgur.com/sGOEK6L.png)
+![A screenshot of the Arc-Flatabulous theme](http://i.imgur.com/sGOEK6L.png)
 
 ##### Arc-Flatabulous-Darker
 
-![A screenshot of the Arc-Darker theme](http://i.imgur.com/gneZsVQ.png)
+![A screenshot of the Arc-Flatabulous-Darker theme](http://i.imgur.com/gneZsVQ.png)
 
 ##### Arc-Flatabulous-Dark
 
-![A screenshot of the Arc-Dark theme](http://i.imgur.com/zUC1pHT.png)
+![A screenshot of the Arc-Flatabulous-Dark theme](http://i.imgur.com/zUC1pHT.png)
 
 ### Installation
 
@@ -86,7 +86,7 @@ Other options to pass to autogen.sh are
 
 After the installation is complete you can activate the theme with `gnome-tweak-tool` or a similar program by selecting `Arc-Flatabulous`, `Arc-Flatabulous-Darker` or `Arc-Flatabulous-Dark` as Window/GTK+ theme and `Arc-Flatabulous` or `Arc-Flatabulous-Dark` as Gnome-Shell and Xfce-Notify theme.
 
-If the `--disable-transparency` option was used, the theme will be installed as `Arc-solid`, `Arc-Darker-solid` and `Arc-Dark-solid`.
+If the `--disable-transparency` option was used, the theme will be installed as `Arc-Flatabulous-Solid`, `Arc-Flatabulous-Darker-Solid` and `Arc-Flatabulous-Dark-Solid`.
 
 **Uninstall the theme**
 
@@ -135,9 +135,9 @@ Arc is available under the terms the GPL-3.0. See `COPYING` for details.
 <sub>Screenshot Details: Icons: [Numix Circle](https://github.com/numixproject/numix-icon-theme-circle) | [Wallpaper](https://github.com/GNOME/gnome-backgrounds/blob/master/backgrounds/Waves.jpg) | Font: [Source Sans Pro](https://github.com/adobe-fonts/source-sans-pro)</sub>
 
 ## Bugs
-f you find a bug, please report it at https://github.com/andreisergiu98/arc-flatabulous-theme/issues
+If you find a bug, please report it at https://github.com/andreisergiu98/arc-flatabulous-theme/issues
 
 ### Credits
-* **horst3180** for creating the [Arc](https://github.com/horst3180/arc-theme) theme.
-* **NicoHood** and **fossfreedom** for maintaining [Arc](https://github.com/NicoHood/arc-theme).
-* **Anmol Jagetia** for creating the [Flatabulous](https://github.com/anmoljagetia/Flatabulous) theme.
+* **[horst3180](https://github.com/horst3180)** for creating the [Arc](https://github.com/horst3180/arc-theme) theme.
+* **[NicoHood](https://github.com/NicoHood)** and **[fossfreedom](https://github.com/fossfreedom)** for maintaining [Arc](https://github.com/NicoHood/arc-theme).
+* **[Anmol Jagetia](https://github.com/anmoljagetia)** for creating the [Flatabulous](https://github.com/anmoljagetia/Flatabulous) theme.
