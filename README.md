@@ -29,7 +29,7 @@ Arch Linux users can install the theme from the AUR https://aur.archlinux.org/pa
 	
 #### Manual Installation
 
-To build the theme the follwing packages are required
+To build the theme the following packages are required
 * `autoconf`
 * `automake`
 * `sassc`
