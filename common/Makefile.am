@@ -1,11 +1,11 @@
 if !ENABLE_TRANSPARENCY
-themedir        = $(datadir)/themes/Arc-solid
-themedarkerdir  = $(datadir)/themes/Arc-Darker-solid
-themedarkdir    = $(datadir)/themes/Arc-Dark-solid
+themedir        = $(datadir)/themes/UMI-ArcX-solid
+themedarkerdir  = $(datadir)/themes/UMI-ArcX-Darker-solid
+themedarkdir    = $(datadir)/themes/UMI-ArcX-Dark-solid
 else
-themedir        = $(datadir)/themes/Arc
-themedarkerdir  = $(datadir)/themes/Arc-Darker
-themedarkdir    = $(datadir)/themes/Arc-Dark
+themedir        = $(datadir)/themes/UMI-ArcX
+themedarkerdir  = $(datadir)/themes/UMI-ArcX-Darker
+themedarkdir    = $(datadir)/themes/UMI-ArcX-Dark
 endif
 
 ithemedir       = $(DESTDIR)$(themedir)

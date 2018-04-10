@@ -1,45 +1,22 @@
-# Arc Theme
+# UMI ArcX Theme
 
-Arc is a flat theme with transparent elements for GTK 3, GTK 2 and GNOME Shell which supports GTK 3 and GTK 2 based desktop environments like GNOME, Unity, Budgie, Pantheon, Xfce, MATE, etc.
+UMI ArcX a flat theme with transparent elements, base on Arc theme with "X" picked design, for GTK 3, GTK 2 and GNOME Shell which supports GTK 3 and GTK 2 based desktop environments like GNOME, Unity, Budgie, Pantheon, Xfce, MATE, etc.
 
-## Arc is available in three variants 
+## UMI ArcX is available in three variants 
 
-##### Arc
+##### UMI-arcx
 
-![A screenshot of the Arc theme](http://i.imgur.com/Ph5ObOa.png)
+![A screenshot of the UMI ArcX theme](http://i.imgur.com/Ph5ObOa.png)
 
-##### Arc-Darker
+##### UMI-arcx-darker
 
-![A screenshot of the Arc-Darker theme](http://i.imgur.com/NC6dqyl.png)
+![A screenshot of the UMI ArcX-Darker theme](http://i.imgur.com/NC6dqyl.png)
 
-##### Arc-Dark
+##### UMI-arcx-Dark
 
-![A screenshot of the Arc-Dark theme](http://i.imgur.com/5AGlCnA.png)
+![A screenshot of the UMI ArcX-Dark theme](http://i.imgur.com/5AGlCnA.png)
 
 ## Installation
-
-### Packages
-
-|Distro|Package Name/Link|
-|:----:|:----:|
-| Arch Linux | `arc-gtk-theme`, [`gtk-theme-arc-git`](https://aur.archlinux.org/packages/gtk-theme-arc-git) (AUR) |
-| Debian 8 | [OBS Repo][obs-repo] |
-| Debian Testing/Unstable | `arc-theme` |
-| Fedora 21 - 23 | [OBS Repo][obs-repo] |
-| Fedora 24 -25 | `arc-theme` |
-| Gentoo/Funtoo | `x11-themes/arc-theme` from the [Scriptkitties Overlay][sk-overlay] |
-| openSUSE | [OBS Repo][obs-repo] |
-| Solus | `arc-gtk-theme` |
-| Ubuntu 15.04 - 16.04 | [OBS Repo][obs-repo] |
-| Ubuntu 16.10 | `arc-theme` |
-
-**elementary OS Note:** elementary OS Freya users can install the package for Ubuntu 15.04, Loki users can install the package for Ubuntu 16.04.
-
-**AUR Note:** If you're having trouble with the AUR packages please email the package maintainer at zach@zach-adams.com before creating an issue.
-
-A non-transparent version of the theme is available here: [Arc Solid OBS repo](http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-theme-solid)
-
---
 
 ### Manual Installation
 
@@ -68,7 +45,7 @@ Install the theme with the following commands
 
 Clone the git repository with
 
-    git clone https://github.com/horst3180/arc-theme --depth 1 && cd arc-theme
+    git clone https://github.com/umilinux/umi-arcx-theme --depth 1 && cd arc-theme
 
 #### 2. Build and install the theme
 
@@ -78,9 +55,9 @@ Clone the git repository with
 Other options to pass to autogen.sh are
 
     --disable-transparency     disable transparency in the GTK3 theme
-    --disable-light            disable Arc Light support
-    --disable-darker           disable Arc Darker support
-    --disable-dark             disable Arc Dark support
+    --disable-light            disable UMI ArcX Light support
+    --disable-darker           disable UMI ArcX Darker support
+    --disable-dark             disable UMI ArcX Dark support
     --disable-cinnamon         disable Cinnamon support
     --disable-gnome-shell      disable GNOME Shell support
     --disable-gtk2             disable GTK2 support
@@ -95,9 +72,9 @@ Other options to pass to autogen.sh are
                                Note 2: For GNOME 3.24, use --with-gnome-version=3.22
                                (this works for now, the build system will be improved in the future)
 
-After the installation is complete the theme can be activated with `gnome-tweak-tool` or a similar program by selecting `Arc`, `Arc-Darker` or `Arc-Dark` as Window/GTK+ theme and `Arc` or `Arc-Dark` as GNOME Shell/Cinnamon theme.
+After the installation is complete the theme can be activated with `gnome-tweak-tool` or a similar program by selecting `UMI-ArcX`, `UMI-ArcX-Darker` or `UMI-ArcX-Dark` as Window/GTK+ theme and `UMI-ArcX` or `UMI-ArcX-Dark` as GNOME Shell/Cinnamon theme.
 
-If the `--disable-transparency` option was used, the theme will be installed as `Arc-solid`, `Arc-Darker-solid` and `Arc-Dark-solid`.
+If the `--disable-transparency` option was used, the theme will be installed as `UMI-ArcX-solid`, `UMI-ArcX-Darker-solid` and `UMI-ArcX-Dark-solid`.
 
 ## Uninstall
 
@@ -107,12 +84,12 @@ Run
 
 from the cloned git repository, or
 
-    sudo rm -rf /usr/share/themes/{Arc,Arc-Darker,Arc-Dark}
+    sudo rm -rf /usr/share/themes/{UMI-ArcX,UMI-ArcX-Darker,UMI-ArcX-Dark}
 
 ## Extras
 
-### Arc KDE
-A port of Arc for the Plasma 5 desktop with a few additions and extras. Available [here](https://github.com/PapirusDevelopmentTeam/arc-kde).
+### UMI ArcX KDE
+A port of UMI ArcX for the Plasma 5 desktop with a few additions and extras. Available [here](https://github.com/PapirusDevelopmentTeam/arc-kde).
 
 ### Arc Firefox theme
 A theme for Firefox is available at https://github.com/horst3180/arc-firefox-theme
@@ -143,14 +120,12 @@ If you get artifacts like black or invisible backgrounds under Unity, disable ov
 
 
 ## Bugs
-If you find a bug, please report it at https://github.com/horst3180/arc-theme/issues
+If you find a bug, please report it at https://github.com/umilinux/umi-arcx-theme/issues
 
 ## License
-Arc is available under the terms of the GPL-3.0. See `COPYING` for details.
+UMI ArcX is available under the terms of the GPL-3.0. See `COPYING` for details.
 
 ## Full Preview
 ![A full screenshot of the Arc theme](http://i.imgur.com/tD1OBQ3.png)
-<sub>Screenshot Details: Icons: [Arc](https://github.com/horst3180/arc-icon-theme) | Launcher Icons based on [White Pixel Icons](http://darkdawg.deviantart.com/art/White-Pixel-Icons-252310560) | [Wallpaper](https://pixabay.com/photo-869593/) | Font: Futura Bk bt</sub>
+<sub>Screenshot Details: Icons: [Arc](https://github.com/umilinux/umi-arcx-theme) | Launcher Icons based on [White Pixel Icons](http://darkdawg.deviantart.com/art/White-Pixel-Icons-252310560) | [Wallpaper](https://pixabay.com/photo-869593/) | Font: Futura Bk bt</sub>
 
-[obs-repo]: http://software.opensuse.org/download.html?project=home%3AHorst3180&package=arc-theme
-[sk-overlay]: https://c.darenet.org/scriptkitties/overlay
