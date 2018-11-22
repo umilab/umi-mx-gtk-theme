@@ -1,11 +1,27 @@
-if !ENABLE_TRANSPARENCY
-themedir        = $(datadir)/themes/Arc-Flatabulous-Solid
-themedarkerdir  = $(datadir)/themes/Arc-Flatabulous-Darker-Solid
-themedarkdir    = $(datadir)/themes/Arc-Flatabulous-Dark-Solid
-else
-themedir        = $(datadir)/themes/Arc-Flatabulous
-themedarkerdir  = $(datadir)/themes/Arc-Flatabulous-Darker
-themedarkdir    = $(datadir)/themes/Arc-Flatabulous-Dark
+if ENABLE_GTK2
+GTK2_SUBDIR = gtk-2.0
+endif
+
+if ENABLE_GTK3
+GTK3_SUBDIR = gtk-3.0
+endif
+
+if ENABLE_XFWM
+XFWM_SUBDIR = xfwm4
+endif
+
+SUBDIRS = $(GTK2_SUBDIR) $(GTK3_SUBDIR) $(XFWM_SUBDIR)
+
+if ENABLE_LIGHT
+theme_DATA = $(srcdir)/index/light/index.theme
+endif
+
+if ENABLE_DARKER
+themedarker_DATA = $(srcdir)/index/darker/index.theme
+endif
+
+if ENABLE_DARK
+themedark_DATA = $(srcdir)/index/dark/index.theme
 endif
 
 ithemedir       = $(DESTDIR)$(themedir)
@@ -16,28 +32,12 @@ install-exec-hook:
 
 install-data-local:
 
-if ENABLE_LIGHT
-	$(MKDIR_P) $(ithemedir)
-	cp $(srcdir)/index.theme $(ithemedir)
-endif # ENABLE_LIGHT
-
-if ENABLE_DARKER
-	$(MKDIR_P) $(ithemedarkerdir)
-	cp $(srcdir)/index.theme-darker $(ithemedarkerdir)/index.theme
-endif # ENABLE_LIGHT
-
-if ENABLE_DARK
-	$(MKDIR_P) $(ithemedarkdir)
-	cp $(srcdir)/index.theme-dark $(ithemedarkdir)/index.theme
-endif # ENABLE_DARK
-
-
 if ENABLE_CINNAMON
 	$(MKDIR_P) $(ithemedir)/cinnamon
 
 	cd $(srcdir)/cinnamon && cp thumbnail.png $(ithemedir)/cinnamon
 
-	sassc $(srcdir)/cinnamon/sass/cinnamon.scss $(srcdir)/cinnamon/cinnamon.css;
+	$(SASSC) $(srcdir)/cinnamon/sass/cinnamon.scss $(srcdir)/cinnamon/cinnamon.css;
 
 	cd $(srcdir)/cinnamon && cp -R \
 		common-assets \
@@ -50,7 +50,7 @@ if ENABLE_DARK
 
 	cd $(srcdir)/cinnamon && cp thumbnail-dark.png $(ithemedarkdir)/cinnamon/thumbnail.png
 
-	sassc $(srcdir)/cinnamon/sass/cinnamon-dark.scss $(srcdir)/cinnamon/cinnamon-dark.css;
+	$(SASSC) $(srcdir)/cinnamon/sass/cinnamon-dark.scss $(srcdir)/cinnamon/cinnamon-dark.css;
 
 	cd $(srcdir)/cinnamon && cp -R \
 		common-assets \
@@ -68,9 +68,9 @@ endif # ENABLE_GNOME_SHELL
 if ENABLE_GNOME_SHELL
 	$(MKDIR_P) $(ithemedir)/gnome-shell
 
-	sassc $(srcdir)/gnome-shell/$(GNOME_VERSION)/sass/gnome-shell.scss $(srcdir)/gnome-shell/$(GNOME_VERSION)/gnome-shell.css;
+	$(SASSC) $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/sass/gnome-shell.scss $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/gnome-shell.css;
 
-	cd $(srcdir)/gnome-shell/$(GNOME_VERSION) && cp -R \
+	cd $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION) && cp -RL \
 		common-assets \
 		light-assets \
 		gnome-shell.css \
@@ -79,165 +79,19 @@ if ENABLE_GNOME_SHELL
 if ENABLE_DARK
 	$(MKDIR_P) $(ithemedarkdir)/gnome-shell
 
-	sassc $(srcdir)/gnome-shell/$(GNOME_VERSION)/sass/gnome-shell-dark.scss $(srcdir)/gnome-shell/$(GNOME_VERSION)/gnome-shell-dark.css;
+	$(SASSC) $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/sass/gnome-shell-dark.scss $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION)/gnome-shell-dark.css;
 
-	cd $(srcdir)/gnome-shell/$(GNOME_VERSION) && cp -R \
+	cd $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION) && cp -RL \
 		common-assets \
 		dark-assets \
 		$(ithemedarkdir)/gnome-shell
 
-	cd $(srcdir)/gnome-shell/$(GNOME_VERSION) && cp -R \
+	cd $(srcdir)/gnome-shell/$(GNOME_SHELL_VERSION) && cp -R \
 		gnome-shell-dark.css \
 		$(ithemedarkdir)/gnome-shell/gnome-shell.css
 endif # ENABLE_DARK
 
 endif # ENABLE_GNOME_SHELL
-
-
-if ENABLE_GTK2
-
-if ENABLE_LIGHT
-	$(MKDIR_P) $(ithemedir)/gtk-2.0
-
-	cd $(srcdir)/gtk-2.0 && cp -R \
-		assets \
-		menubar-toolbar \
-		*.rc \
-		gtkrc \
-		$(ithemedir)/gtk-2.0
-endif # ENABLE_LIGHT
-
-if ENABLE_DARKER
-	$(MKDIR_P) $(ithemedarkerdir)/gtk-2.0
-
-	cd $(srcdir)/gtk-2.0 && cp -R \
-		assets \
-		menubar-toolbar \
-		*.rc \
-		$(ithemedarkerdir)/gtk-2.0
-
-	cd $(srcdir)/gtk-2.0 && cp -R \
-		gtkrc-darker \
-		$(ithemedarkerdir)/gtk-2.0/gtkrc
-endif # ENABLE_DARKER
-
-if ENABLE_DARK
-	$(MKDIR_P) $(ithemedarkdir)/gtk-2.0
-
-	cd $(srcdir)/gtk-2.0 && cp -R \
-		menubar-toolbar \
-		*.rc \
-		$(ithemedarkdir)/gtk-2.0
-
-	cd $(srcdir)/gtk-2.0 && cp -R \
-		assets-dark \
-		$(ithemedarkdir)/gtk-2.0/assets
-
-	cd $(srcdir)/gtk-2.0 && cp -R \
-		gtkrc-dark \
-		$(ithemedarkdir)/gtk-2.0/gtkrc
-endif # ENABLE_DARK
-
-endif # ENABLE_GTK2
-
-
-if ENABLE_GTK3
-
-if ENABLE_LIGHT
-	$(MKDIR_P) $(ithemedir)/gtk-3.0
-
-	cd $(srcdir)/gtk-3.0 && cp thumbnail.png $(ithemedir)/gtk-3.0
-
-	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk.css;
-	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-dark.css;
-
-	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
-		assets \
-		gtk.css \
-		gtk-dark.css \
-		$(ithemedir)/gtk-3.0
-endif # ENABLE_LIGHT
-
-if ENABLE_DARKER
-	$(MKDIR_P) $(ithemedarkerdir)/gtk-3.0
-
-	cd $(srcdir)/gtk-3.0 && cp thumbnail.png $(ithemedarkerdir)/gtk-3.0
-
-	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-dark.css;
-	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-darker.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-darker.css;
-	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk.css;
-
-	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
-		assets \
-		gtk-dark.css \
-		$(ithemedarkerdir)/gtk-3.0
-
-	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
-		gtk-darker.css \
-		$(ithemedarkerdir)/gtk-3.0/gtk.css
-endif # ENABLE_DARKER
-
-if ENABLE_DARK
-	$(MKDIR_P) $(ithemedarkdir)/gtk-3.0
-
-	cd $(srcdir)/gtk-3.0 && cp thumbnail-dark.png $(ithemedarkdir)/gtk-3.0/thumbnail.png
-
-	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
-		assets \
-		$(ithemedarkdir)/gtk-3.0
-
-	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-dark.css;
-	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk.css;
-
-	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
-		gtk-dark.css \
-		$(ithemedarkdir)/gtk-3.0/gtk.css
-endif # ENABLE_DARK
-
-if !ENABLE_TRANSPARENCY
-
-if ENABLE_LIGHT
-	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-solid.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-solid.css;
-	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-solid-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-solid-dark.css;
-	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk.css;
-	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-dark.css;
-
-	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
-		gtk-solid.css \
-		$(ithemedir)/gtk-3.0/gtk.css
-
-	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
-		gtk-solid-dark.css \
-		$(ithemedir)/gtk-3.0/gtk-dark.css
-endif # ENABLE_LIGHT
-
-if ENABLE_DARKER
-	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-solid-darker.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-solid-darker.css;
-	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-solid-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-solid-dark.css;
-	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk.css;
-	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-dark.css;
-
-	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
-		gtk-solid-darker.css \
-		$(ithemedarkerdir)/gtk-3.0/gtk.css
-
-	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
-		gtk-solid-dark.css \
-		$(ithemedarkerdir)/gtk-3.0/gtk-dark.css
-endif # ENABLE_DARKER
-
-if ENABLE_DARK
-	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk-solid-dark.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk-solid-dark.css;
-	sassc $(srcdir)/gtk-3.0/$(GNOME_VERSION)/sass/gtk.scss $(srcdir)/gtk-3.0/$(GNOME_VERSION)/gtk.css;
-
-	cd $(srcdir)/gtk-3.0/$(GNOME_VERSION) && cp -R \
-		gtk-solid-dark.css \
-		$(ithemedarkdir)/gtk-3.0/gtk.css
-endif # ENABLE_DARK
-
-endif #!ENABLE_TRANSPARENCY
-
-endif # ENABLE_GTK3
 
 
 if ENABLE_METACITY
@@ -268,6 +122,22 @@ endif # ENABLE_DARK
 
 endif # ENABLE_METACITY
 
+if ENABLE_OPENBOX
+
+if ENABLE_LIGHT
+	cp -R $(srcdir)/openbox/Arc/* $(ithemedir)
+endif # ENABLE_LIGHT
+
+if ENABLE_DARKER
+	cp -R $(srcdir)/openbox/Arc-Darker/* $(ithemedarkerdir)
+endif # ENABLE_DARKER
+
+if ENABLE_DARK
+	cp -R $(srcdir)/openbox/Arc-Dark/* $(ithemedarkdir)
+endif # ENABLE_DARK
+
+endif # ENABLE_OPENBOX
+
 
 if ENABLE_UNITY
 
@@ -296,35 +166,6 @@ endif # ENABLE_DARK
 endif # ENABLE_UNITY
 
 
-if ENABLE_XFWM
-
-if ENABLE_LIGHT
-	$(MKDIR_P) $(ithemedir)/xfwm4
-
-	cd $(srcdir)/xfwm4 && \
-		cp -R assets/*.png $(ithemedir)/xfwm4 && \
-		cp themerc $(ithemedir)/xfwm4/themerc
-endif # ENABLE_LIGHT
-
-if ENABLE_DARKER
-	$(MKDIR_P) $(ithemedarkerdir)/xfwm4
-
-	cd $(srcdir)/xfwm4 && \
-		cp -R assets-dark/*.png $(ithemedarkerdir)/xfwm4 && \
-		cp themerc-dark $(ithemedarkerdir)/xfwm4/themerc
-endif # ENABLE_DARKER
-
-if ENABLE_DARK
-	$(MKDIR_P) $(ithemedarkdir)/xfwm4
-
-	cd $(srcdir)/xfwm4 && \
-		cp -R assets-dark/*.png $(ithemedarkdir)/xfwm4 && \
-		cp themerc-dark $(ithemedarkdir)/xfwm4/themerc
-endif # ENABLE_DARK
-
-endif # ENABLE_XFWM
-
-
 uninstall-local:
 	rm -rf $(ithemedir)
 
@@ -337,13 +178,9 @@ if ENABLE_DARK
 endif # ENABLE_DARK
 
 
-EXTRA_DIST = $(srcdir)/cinnamon \
-	     $(srcdir)/gnome-shell \
-	     $(srcdir)/gtk-2.0 \
-	     $(srcdir)/gtk-3.0 \
-	     $(srcdir)/metacity-1 \
-	     $(srcdir)/unity \
-	     $(srcdir)/xfwm4 \
-	     $(srcdir)/index.theme \
-	     $(srcdir)/index.theme-darker \
-	     $(srcdir)/index.theme-dark
+EXTRA_DIST = \
+	cinnamon \
+	gnome-shell \
+	index \
+	metacity-1 \
+	unity

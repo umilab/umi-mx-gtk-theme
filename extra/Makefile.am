@@ -1,13 +1,3 @@
-if !ENABLE_TRANSPARENCY
-themedir        = $(datadir)/themes/Arc-Flatabulous-Solid
-themedarkerdir  = $(datadir)/themes/Arc-Flatabulous-Darker-Solid
-themedarkdir    = $(datadir)/themes/Arc-Flatabulous-Dark-Solid
-else
-themedir        = $(datadir)/themes/Arc-Flatabulous
-themedarkerdir  = $(datadir)/themes/Arc-Flatabulous-Darker
-themedarkdir    = $(datadir)/themes/Arc-Flatabulous-Dark
-endif
-
 ithemedir       = $(DESTDIR)$(themedir)
 ithemedarkerdir = $(DESTDIR)$(themedarkerdir)
 ithemedarkdir   = $(DESTDIR)$(themedarkdir)
@@ -39,4 +29,5 @@ endif # ENABLE_PLANK
 uninstall-local:
 
 
-EXTRA_DIST = $(srcdir)/Arc-Plank
+EXTRA_DIST = \
+	Arc-Plank

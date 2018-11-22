@@ -1616,13 +1616,8 @@ menu,
   separator,
   .csd & separator {
     margin: 2px 0;
-    background-color: $_menu_bg;
+    background-color: $horizontal_separators_color;
   }
-
-  // Firefox workaround
-  .separator:not(label),
-  .csd & .separator:not(label) { color: $_menu_bg; }
-  // Firefox workaround end
 
   menuitem {
     min-height: 16px;
@@ -3169,6 +3164,41 @@ headerbar,
                                                      url('assets/titlebutton-#{$k}#{$m}#{$darker_asset_suffix}@2.png')); }
       }
     }
+  }
+  .maximized & {
+    button.titlebutton {
+    padding: 0;
+    min-width: 24px;
+
+    @include button(undecorated);
+    background-color: transparentize($header_bg, 1);
+
+    &:hover {
+      @include button(header-hover);
+    }
+    &:active, &:checked {
+      @include button(header-active);
+    }
+    &.close, &.maximize, &.minimize {
+      color: transparent;
+      background-color: transparent;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-width: 0;
+
+      &:backdrop { opacity: 1; }
+    }
+    // Load png assets for each button
+    @each $k in ('close', 'minimize') {
+      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-active') {
+
+        &.#{$k}#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}#{$darker_asset_suffix}.png'),
+                                                     url('assets/titlebutton-#{$k}#{$m}#{$darker_asset_suffix}@2.png')); }
+        &.maximize#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-unmaximize#{$m}#{$darker_asset_suffix}.png'),
+                                                     url('assets/titlebutton-unmaximize#{$m}#{$darker_asset_suffix}@2.png')); }
+      }
+    }
+  }
   }
 }
 

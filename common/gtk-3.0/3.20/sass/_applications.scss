@@ -66,6 +66,30 @@ terminal-window,
   background-color: $base_color;
 }
 
+// Pathbar for nautilus >=3.30
+.nautilus-window .path-bar-box.width-maximized {
+  border: 1px $header_button_border solid;
+  border-radius: 3px;
+  transition: border $backdrop_transition;
+  transition: background-color $backdrop_transition;
+
+  &:not(:backdrop) {
+    background-color: $header_button_bg;
+  }
+}
+.nautilus-window .path-bar > box > button {
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 0;
+  color: $header_fg;
+  margin: 0 2px;
+  padding: 1px;
+
+  &:not(:backdrop):hover {
+    box-shadow: 0 -3px $selected_bg_color inset;
+  }
+}
+
 button.nautilus-circular-button.image-button {
   @extend button.circular;
 }
@@ -156,6 +180,45 @@ $disk_space_free: darken($bg_color, 3%);
     }
 
     @include pathbar_linking_rules($sep_color:$header_button_border);
+  }
+}
+
+//
+// Thunar
+//
+.thunar {
+  toolbar.horizontal button image {
+    -gtk-icon-transform: scale(0.75);
+  }
+
+  scrolledwindow.standard-view {
+    border-top-width: 0;
+  }
+
+  toolbar {
+    color: $header_fg;
+    background-color: opacify($header_bg, 1);
+    box-shadow: none;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, opacify($header_bg, 1),
+                                             darken($header_bg, 7%)) 1 0 1 0; //temporary hack for rhythmbox 3.1
+
+    @extend %header_widgets;
+  }
+
+  scrolledwindow.sidebar {
+    border-top-color: darken($dark_sidebar_bg, 6%);
+  }
+
+  scrolledwindow.sidebar treeview.view {
+    background: $dark_sidebar_bg;
+    color: $dark_sidebar_fg;
+    
+    &:selected, &:active {
+      background: $selected_bg_color;
+      color: $selected_fg_color;
+    }
   }
 }
 
@@ -690,7 +753,7 @@ panel-toplevel.background {
 //
 // Floating Bar
 //
-.nautilus-window .floating-bar {
+.nautilus-window .floating-bar, .nemo-window .floating-bar {
   padding: 1px;
   background-color: $selected_bg_color;
   color: $selected_fg_color;

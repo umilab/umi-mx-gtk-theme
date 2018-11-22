@@ -32,16 +32,21 @@ Arch Linux users can install the theme from the AUR https://aur.archlinux.org/pa
 To build the theme the following packages are required
 * `autoconf`
 * `automake`
-* `sassc`
+* `sassc` for GTK 3, Cinnamon, or GNOME Shell
 * `pkg-config` or `pkgconfig` for Fedora
-* `libgtk-3-dev` for Debian based distros or `gtk3-devel` for RPM based distros
 * `git` to clone the source directory
+* `optipng` for GTK 2, GTK 3, or XFWM
+* `inkscape` for GTK 2, GTK 3, or XFWM
+
+The following packages are optionally required
+* `gnome-shell`for auto-detecting the GNOME Shell version
+* `libgtk-3-dev` for Debian based distros or `gtk3-devel` for RPM based distros, for auto-detecting the GTK3 version
 
 **Note:** For distributions which don't ship separate development packages, just the GTK 3 package is needed instead of the `-dev` packages.
 
 For the theme to function properly, install the following
-* GNOME Shell 3.18 - 3.26, GTK 3.18 - 3.22
-* The `gnome-themes-standard` package
+* GNOME Shell 3.18 - 3.30, GTK 3.18 - 3.24
+* The `gnome-themes-extra` package
 * The murrine engine. This has different names depending on the distro.
   * `gtk-engine-murrine` (Arch Linux)
   * `gtk2-engines-murrine` (Debian, Ubuntu, elementary OS)
@@ -64,25 +69,25 @@ If you want to install the latest version from git, clone the repository with
 
 Other options to pass to autogen.sh are
 
-    --disable-transparency     disable transparency in the GTK3 theme
-    --disable-light            disable Arc Light support
-    --disable-darker           disable Arc Darker support
-    --disable-dark             disable Arc Dark support
-    --disable-cinnamon         disable Cinnamon support
-    --disable-gnome-shell      disable GNOME Shell support
-    --disable-gtk2             disable GTK2 support
-    --disable-gtk3             disable GTK3 support
-    --disable-metacity         disable Metacity support
-    --disable-unity            disable Unity support
-    --disable-xfwm             disable XFWM support
-    --disable-plank            disable Plank theme support
+    --disable-transparency         disable transparency in the GTK3 theme
+    --disable-light                disable Arc Light support
+    --disable-darker               disable Arc Darker support
+    --disable-dark                 disable Arc Dark support
+    --disable-cinnamon             disable Cinnamon support
+    --disable-gnome-shell          disable GNOME Shell support
+    --disable-gtk2                 disable GTK2 support
+    --disable-gtk3                 disable GTK3 support
+    --disable-metacity             disable Metacity support
+    --disable-unity                disable Unity support
+    --disable-xfwm                 disable XFWM support
+    --disable-plank                disable Plank theme support
+    --disable-openbox              disable Openbox support
 
-    --with-gnome=<version>     build the theme for a specific GNOME version (3.18, 3.20, 3.22)
-                               Note 1: Normally the correct version is detected automatically and this
-                               option should not be needed.
-                               Note 2: For GNOME 3.24 and 3.26, use --with-gnome-version=3.22
-                               (this works for now, the build system will be improved in the future)
-    --with-custom=<script>     run the executable script file in the custom subfolder
+    --with-gnome-shell=<version>   build the gnome-shell theme for a specific version
+    --with-gtk3=<version>          build the GTK3 theme for a specific version
+                                   Note: Normally the correct version is detected automatically
+                                   and these options should not be needed.
+    --with-custom=<script>         run the executable script file in the custom subfolder
 
 After the installation is complete you can activate the theme with `gnome-tweak-tool` or a similar program by selecting `Arc-Flatabulous`, `Arc-Flatabulous-Darker` or `Arc-Flatabulous-Dark` as Window/GTK+ theme and `Arc-Flatabulous` or `Arc-Flatabulous-Dark` as Gnome-Shell and Xfce-Notify theme.
 
