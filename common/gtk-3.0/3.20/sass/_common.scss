@@ -1892,8 +1892,8 @@ scrollbar {
   }
 
   &.horizontal button {
-    &.down { -gtk-icon-source: -gtk-icontheme('pan-right-symbolic'); }
-    &.up { -gtk-icon-source: -gtk-icontheme('pan-left-symbolic'); }
+    &.down { -gtk-icon-source: -gtk-icontheme('pan-end-symbolic'); }
+    &.up { -gtk-icon-source: -gtk-icontheme('pan-start-symbolic'); }
   }
 
   // slider
@@ -2334,12 +2334,12 @@ progressbar {
 //
 levelbar {
   block {
-    min-width: 32px;
+    min-width: 1px;
     min-height: 1px;
   }
   &.vertical block {
     min-width: 1px;
-    min-height: 32px;
+    min-height: 1px;
   }
 
   trough {
