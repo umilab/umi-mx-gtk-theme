@@ -28,13 +28,13 @@ ARC_ENABLE([PLANK],         [plank],         [Plank theme],        [disable])
 ARC_ENABLE([OPENBOX],       [openbox],       [Openbox],            [disable])
 
 AS_IF([test "x$ENABLE_TRANSPARENCY" != xno], [
-    AC_SUBST([themedir], [${datadir}/themes/Arc-Flatabulous])
-    AC_SUBST([themedarkerdir], [${datadir}/themes/Arc-Flatabulous-Darker])
-    AC_SUBST([themedarkdir], [${datadir}/themes/Arc-Flatabulous-Dark])
+    AC_SUBST([themedir], [${datadir}/themes/umi-arcx])
+    AC_SUBST([themedarkerdir], [${datadir}/themes/umi-arcx-darker])
+    AC_SUBST([themedarkdir], [${datadir}/themes/umi-arcx-dark])
 ], [
-    AC_SUBST([themedir], [${datadir}/themes/Arc-Flatabulous-solid])
-    AC_SUBST([themedarkerdir], [${datadir}/themes/Arc-Flatabulous-Darker-solid])
-    AC_SUBST([themedarkdir], [${datadir}/themes/Arc-Flatabulous-Dark-solid])
+    AC_SUBST([themedir], [${datadir}/themes/umi-arcx-solid])
+    AC_SUBST([themedarkerdir], [${datadir}/themes/umi-arcx-darker-solid])
+    AC_SUBST([themedarkdir], [${datadir}/themes/umi-arcx-dark-solid])
 ])
 
 AS_IF([test "x$ENABLE_GTK3" != xno], [ARC_GTK3])
