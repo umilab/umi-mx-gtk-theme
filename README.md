@@ -16,7 +16,6 @@ UMI ArcX a flat theme with transparent elements, base on Arc theme and Flatabulo
 
 ![A screenshot of the UMI ArcX-Dark theme](http://i.imgur.com/zUC1pHT.png)
 
-
 ### Manual Installation
 
 **Important:** Remove all older versions of the theme from your system before you proceed any further.
@@ -82,7 +81,6 @@ Other options to pass to autogen.sh are
     --with-gtk3=<version>          build the GTK3 theme for a specific version
                                    Note: Normally the correct version is detected automatically
                                    and these options should not be needed.
-    --with-custom=<script>         run the executable script file in the custom subfolder
 
 After the installation is complete the theme can be activated with `gnome-tweak-tool` or a similar program by selecting `UMI-ArcX`, `UMI-ArcX-Darker` or `UMI-ArcX-Dark` as Window/GTK+ theme and `UMI-ArcX` or `UMI-ArcX-Dark` as GNOME Shell/Cinnamon theme.
 

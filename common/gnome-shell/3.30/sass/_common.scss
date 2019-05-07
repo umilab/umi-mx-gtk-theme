@@ -144,7 +144,7 @@ StScrollBar {
   -barlevel-active-background-color: $selected_bg_color;        //active trough fill
   -barlevel-active-border-color: transparentize(black, 1);      //active trough border
   -barlevel-overdrive-color: $destructive_color;
-  -barlevel-overdrive-border-color: transparentize(black, 1); 
+  -barlevel-overdrive-border-color: transparentize(black, 1);
   -barlevel-overdrive-separator-width: 1px;
   -barlevel-border-width: 0;
   -slider-handle-radius: 0px;
@@ -1009,7 +1009,6 @@ StScrollBar {
   .screencast-indicator { color: $error_color; }
 
   .clock-display > * > *:last-child {
-    color: $selected_fg_color;
     margin-left: .3em;
   }
 
@@ -1283,10 +1282,10 @@ StScrollBar {
 .calendar-week-number {
   @include fontsize($font-size * 0.75);
   font-weight: bold;
-  width: 2.3em; height: 1.8em;
+  width: 2.0em; height: 1.5em;
   border-radius: 2px;
-  padding: 0.5em 0 0;
-  margin: 6px;
+  padding: 0.4em 0 0;
+  margin: 2px 6px;
   background-color: transparentize($fg_color,0.7);
   color: $bg_color;
 }
@@ -1319,17 +1318,17 @@ StScrollBar {
     > StIcon {
       icon-size: 18px;
       border-radius: 0px;
-      color: transparent; 
+      color: transparent;
       background-color: transparent;
       background-image: url('#{$asset_path}/misc/message-close.svg');
     }
     &:hover > StIcon {
-      color: transparent; 
+      color: transparent;
       background-color: transparent;
       background-image: url('#{$asset_path}/misc/message-close-hover.svg');
     }
     &:active > StIcon {
-      color: transparent; 
+      color: transparent;
       background-color: transparent;
       background-image: url('#{$asset_path}/misc/message-close-active.svg');
     }
@@ -1448,24 +1447,22 @@ StScrollBar {
   background-size: 26px;
   height: 26px;
   width: 26px;
+  border: 0px;
+  box-shadow: none;
+  background-color: transparent;
+  color: transparent;
 
   &:hover {
     background-image: url("common-assets/misc/close-hover.svg");
-    background-size: 26px;
-    height: 26px;
-    width: 26px;
   }
 
   &:active {
     background-image: url("common-assets/misc/close-active.svg");
-    background-size: 26px;
-    height: 26px;
-    width: 26px;
   }
 }
 
 .window-close {
-  -shell-close-overlap: 11px;
+  -shell-close-overlap: 12px;
 }
 
 //
@@ -1665,13 +1662,9 @@ StScrollBar {
 
 .dash-item-container > StWidget {
 
-  &, &:rtl, .right & {
-    margin: 4px 8px;
-    padding: 0; }
+  &, &:rtl, .right & { padding: 4px 8px; }
 
-  .top &, .bottom & {
-    margin: 6px;
-    padding: 0; }
+  .top &, .bottom & { padding: 6px; }
 }
 
 //osd tooltip
@@ -1692,25 +1685,11 @@ StScrollBar {
 // Dash Buttons
 #dash .app-well-app {
 
-  &:hover,
-  .right &:hover,
-  .bottom &:hover,
-  .top &:hover {
-    background-color: $selected_bg_color;
-  }
-
-  &:active,
-  .right &:active,
-  .bottom &:active,
-  .top &:active {
-    background-color: darken($selected_bg_color, 10%);
-  }
-
   &:hover .overview-icon,
   .right &:hover .overview-icon,
   .bottom &:hover .overview-icon,
   .top &:hover .overview-icon {
-    background-color: transparent;
+    background-color: $selected_bg_color;
   }
 
   &:active .overview-icon,
@@ -1718,7 +1697,7 @@ StScrollBar {
   .bottom &:active .overview-icon,
   .top &:active .overview-icon {
     box-shadow: none;
-    background-color: transparent;
+    background-color: darken($selected_bg_color, 10%);
   }
 
   &-running-dot {
@@ -1726,11 +1705,6 @@ StScrollBar {
     height: 2px;
     margin-bottom: 2px;
     background-color: $selected_bg_color;
-  }
-
-  &:hover .app-well-app-running-dot,
-  &:active .app-well-app-running-dot {
-    background-color: #ffffff;
   }
 }
 
@@ -1741,10 +1715,6 @@ StScrollBar {
     height: 4px;
   }
 
-  .app-well-app:hover .app-well-app-running-dot,
-  .app-well-app:active .app-well-app-running-dot {
-    background-color: transparent;
-  }
   // Add missing 1px margin for finer .show-apps-icon alignment
   // via margin property instead to keep 1px smaller .show-apps-icon size
   // like standard #dash styling. Better than 1px transparent border.
@@ -1753,18 +1723,6 @@ StScrollBar {
   @each $var in 1, 2, 3, 4 {
     .running#{$var} .app-well-app-running-dot {
       background-image: url("common-assets/dash/running#{$var}.svg");
-    }
-    .running#{$var}:hover .app-well-app-running-dot {
-      background-image: url("common-assets/dash/running#{$var}-hover.svg");
-    }
-  }
-
-  &.shrink {
-    .dash-item-container > StWidget, .dash-item-container > StWidget:rtl, .right .dash-item-container > StWidget {
-      margin: 0;
-    }
-    .top .dash-item-container > StWidget, .bottom .dash-item-container > StWidget {
-      margin: 0;
     }
   }
 }
@@ -2174,7 +2132,7 @@ $legacy_icon_size: 24px;
   &:active, &:checked { @include button(osd-active); }
 
   &:grayed { @include button(osd-insensitive); }
-}                             
+}
 
 .keyboard-subkeys { //long press on a key popup
   color: $osd_fg_color;
