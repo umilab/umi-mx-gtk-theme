@@ -66,6 +66,30 @@ terminal-window,
   background-color: $base_color;
 }
 
+// Pathbar for nautilus >=3.30
+.nautilus-window .path-bar-box.width-maximized {
+  border: 1px $header_button_border solid;
+  border-radius: 3px;
+  transition: border $backdrop_transition;
+  transition: background-color $backdrop_transition;
+
+  &:not(:backdrop) {
+    background-color: $header_button_bg;
+  }
+}
+.nautilus-window .path-bar > box > button {
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 0;
+  color: $header_fg;
+  margin: 0 2px;
+  padding: 1px;
+
+  &:not(:backdrop):hover {
+    box-shadow: 0 -3px $selected_bg_color inset;
+  }
+}
+
 button.nautilus-circular-button.image-button {
   @extend button.circular;
 }
@@ -156,6 +180,52 @@ $disk_space_free: darken($bg_color, 3%);
     }
 
     @include pathbar_linking_rules($sep_color:$header_button_border);
+  }
+  
+  // Nemo dual pane inactive pane
+  
+  .nemo-inactive-pane .view {
+    color: $insensitive_fg_color;
+    background-color: $base_color;
+  }
+}
+
+//
+// Thunar
+//
+.thunar {
+  toolbar.horizontal button image {
+    -gtk-icon-transform: scale(0.75);
+  }
+
+  scrolledwindow.standard-view {
+    border-top-width: 0;
+  }
+
+  toolbar {
+    color: $header_fg;
+    background-color: opacify($header_bg, 1);
+    box-shadow: none;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, opacify($header_bg, 1),
+                                             darken($header_bg, 7%)) 1 0 1 0; //temporary hack for rhythmbox 3.1
+
+    @extend %header_widgets;
+  }
+
+  scrolledwindow.sidebar {
+    border-top-color: darken($dark_sidebar_bg, 6%);
+  }
+
+  scrolledwindow.sidebar treeview.view {
+    background: $dark_sidebar_bg;
+    color: $dark_sidebar_fg;
+
+    &:selected, &:active {
+      background: $selected_bg_color;
+      color: $selected_fg_color;
+    }
   }
 }
 
@@ -639,11 +709,15 @@ panel-toplevel.background {
 // Xfce Panel
 .xfce4-panel.panel {
   background-color: $panel_bg;
+  font-weight: normal;
 
   text-shadow: none;
   -gtk-icon-shadow: none;
 
   button.flat { @extend %panelbutton; }
+}
+.xfce4-panel.panel menu {
+  font-weight: normal;
 }
 
 #tasklist-button {
@@ -686,7 +760,7 @@ panel-toplevel.background {
 //
 // Floating Bar
 //
-.nautilus-window .floating-bar {
+.nautilus-window .floating-bar, .nemo-window .floating-bar {
   padding: 1px;
   background-color: $selected_bg_color;
   color: $selected_fg_color;
@@ -768,8 +842,6 @@ panel-toplevel.background {
   background-color: transparent;
   color: white;
   font-weight: bold;
-  text-shadow: 0 1px 2px transparentize(black, 0.4);
-  -gtk-icon-shadow: 0 1px 2px transparentize(black, 0.4);
 
   &-shadow {
     background-image: none;
@@ -825,6 +897,38 @@ panel-toplevel.background {
 .panel .menu .spinner,
 .menu .spinner { opacity: 1 } // Fixes sound indicator buttons
 
+/********************
+ * Mate-Screensaver *
+ ********************/
+
+.lock-dialog {
+    background-color: $panel_bg;
+    color: white;
+
+    & entry, entry:focus textview text {
+        background-color: transparent;
+        color: white;
+        border-style: none;
+        border-bottom: 1px solid $borders_color;
+        border-radius: 1px;
+    }
+
+    frame > border {
+            border-style: none;
+            border-width: 0px;
+        }
+
+    & notebook {
+        color: white;
+        background-color: gtkopacity($panel_bg, 0.8);
+    }
+
+    & button {
+        @extend %selected-button;
+    }
+}
+
+
 //
 // Wingpanel Popover
 //
@@ -867,3 +971,17 @@ panel-toplevel.background {
 //SwitchboardCategoryView .view:selected:focus {
 //  color: $fg_color;
 //}
+
+//
+// Chromium
+//
+window.background.chromium {
+  // See details in nav_button_provider_gtk3.cc
+  headerbar.titlebar button.titlebutton {
+    min-width: 16px;
+    min-height: 16px;
+    // move button spacing from padding to margin
+    margin: 0px ((24px - 16px) / 2);
+    padding: 0px;
+  }
+}

@@ -932,6 +932,7 @@ StScrollBar {
     -minimum-hpadding: 6px;
     font-weight: bold;
     color: $_panel_fg_color;
+    text-shadow: none;
     transition-duration: 100ms;
     border-bottom-width: 1px;
     border-color: transparent;
@@ -943,11 +944,23 @@ StScrollBar {
       margin-right: 0px;
     }
 
+    .system-status-icon,
+    .app-menu-icon > StIcon,
+    .popup-menu-arrow {
+      icon-shadow: none;
+    }
+
     &:hover {
       color: $_panel_fg_color;
       background-color: transparentize(black, 0.83);
       border-bottom-width: 1px;
       border-color: transparent;
+
+      .system-status-icon,
+      .app-menu-icon > StIcon,
+      .popup-menu-arrow {
+        icon-shadow: none;
+      }
     }
 
     &:active, &:overview, &:focus, &:checked {
@@ -960,7 +973,7 @@ StScrollBar {
       & > .system-status-icon { icon-shadow: none; }
     }
 
-    .system-status-icon { icon-size: 16px; padding: 0 4px; }
+    .system-status-icon { color: $selected_fg_color; icon-size: 16px; padding: 0 4px; }
     .unlock-screen &,
     .login-screen &,
     .lock-screen & {
@@ -969,11 +982,16 @@ StScrollBar {
     }
   }
 
+  .panel-button > *{
+    color: $selected_fg_color;
+  }
+
     #panelActivities.panel-button { -natural-hpadding: 12px; }
 
   .panel-status-indicators-box,
   .panel-status-menu-box {
     spacing: 2px;
+    color: $selected_fg_color;
   }
 
   // spacing between power icon and (optional) percentage label
@@ -1641,9 +1659,13 @@ StScrollBar {
 
 .dash-item-container > StWidget {
 
-  &, &:rtl, .right & { padding: 4px 8px; }
+  &, &:rtl, .right & {
+    margin: 4px 8px;
+    padding: 0; }
 
-  .top &, .bottom & { padding: 6px; }
+  .top &, .bottom & {
+    margin: 6px;
+    padding: 0; }
 }
 
 //osd tooltip
@@ -1664,11 +1686,25 @@ StScrollBar {
 // Dash Buttons
 #dash .app-well-app {
 
+  &:hover,
+  .right &:hover,
+  .bottom &:hover,
+  .top &:hover {
+    background-color: $selected_bg_color;
+  }
+
+  &:active,
+  .right &:active,
+  .bottom &:active,
+  .top &:active {
+    background-color: darken($selected_bg_color, 10%);
+  }
+
   &:hover .overview-icon,
   .right &:hover .overview-icon,
   .bottom &:hover .overview-icon,
   .top &:hover .overview-icon {
-    background-color: $selected_bg_color;
+    background-color: transparent;
   }
 
   &:active .overview-icon,
@@ -1676,7 +1712,7 @@ StScrollBar {
   .bottom &:active .overview-icon,
   .top &:active .overview-icon {
     box-shadow: none;
-    background-color: darken($selected_bg_color, 10%);
+    background-color: transparent;
   }
 
   &-running-dot {
@@ -1684,6 +1720,11 @@ StScrollBar {
     height: 2px;
     margin-bottom: 2px;
     background-color: $selected_bg_color;
+  }
+
+  &:hover .app-well-app-running-dot,
+  &:active .app-well-app-running-dot {
+    background-color: #ffffff;
   }
 }
 
@@ -1694,9 +1735,30 @@ StScrollBar {
     height: 4px;
   }
 
+  .app-well-app:hover .app-well-app-running-dot,
+  .app-well-app:active .app-well-app-running-dot {
+    background-color: transparent;
+  }
+  // Add missing 1px margin for finer .show-apps-icon alignment
+  // via margin property instead to keep 1px smaller .show-apps-icon size
+  // like standard #dash styling. Better than 1px transparent border.
+  .show-apps .overview-icon { margin: 1px; }
+
   @each $var in 1, 2, 3, 4 {
     .running#{$var} .app-well-app-running-dot {
       background-image: url("common-assets/dash/running#{$var}.svg");
+    }
+    .running#{$var}:hover .app-well-app-running-dot {
+      background-image: url("common-assets/dash/running#{$var}-hover.svg");
+    }
+  }
+
+  &.shrink {
+    .dash-item-container > StWidget, .dash-item-container > StWidget:rtl, .right .dash-item-container > StWidget {
+      margin: 0;
+    }
+    .top .dash-item-container > StWidget, .bottom .dash-item-container > StWidget {
+      margin: 0;
     }
   }
 }
