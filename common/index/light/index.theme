@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=UMI-ArcX
+Name=umi-arcx
 Comment=A flat theme based on Arc with transparent elements and X picked design
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=UMI-ArcX
-MetacityTheme=UMI-ArcX
+GtkTheme=umi-arcx
+MetacityTheme=umi-arcx
 IconTheme=gnome
 CursorTheme=DMZ-Black
 ButtonLayout=menu:minimize,maximize,close
