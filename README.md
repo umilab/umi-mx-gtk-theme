@@ -4,15 +4,15 @@ UMI ArcX a flat theme with transparent elements, base on Arc theme and Flatabulo
 
 ## UMI ArcX is available in three variants
 
-### UMI-arcx
+### UMI-arcX
 
 ![A screenshot of the UMI ArcX theme](http://tnga.github.io/sharedbazar/_assets/images/umi-mvx-screenshot-20190508153236.png)
 
-### UMI-arcx-darker
+### UMI-arcX-Darker
 
 ![A screenshot of the UMI ArcX-Darker theme](http://tnga.github.io/sharedbazar/_assets/images/umi-mvx-dr-screenshot-20190508153542.png)
 
-### UMI-arcx-Dark
+### UMI-arcX-Dark
 
 ![A screenshot of the UMI ArcX-Dark theme](http://tnga.github.io/sharedbazar/_assets/images/umi-mvx-d-screenshot-20190508153627.png)
 
@@ -130,7 +130,7 @@ UMI ArcX is available under the terms of the GPL-3.0. See `COPYING` for details.
 ## Full Preview
 
 ![A full screenshot of the Arc theme](http://tnga.github.io/sharedbazar/_assets/images/umi-mvx-lde-screenshot-20190508155116.png)
-<sub>Screenshot Details: Icons: [Arc](https://github.com/umilinux/umi-mvx-icons) | [Wallpaper](https://pixabay.com/photo-869593/) | Font: Futura Bk bt</sub>
+<sub>Screenshot Details: Icons: [Arc](https://github.com/umilinux/umi-mvx-icons) | [Wallpaper](https://wallpapers.cimiro.com/wp-content/uploads/sites/4/2019/01/background-beach-beautiful-207135-1.jpg) | Font: Futura Bk bt</sub>
 
 ### Credits
 
