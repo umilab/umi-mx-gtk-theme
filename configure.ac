@@ -1,9 +1,9 @@
 AC_INIT(
     [umi-mx-gtk-theme],
     [20180410],
-    [https://github.com/umilinux/umi-mx-gtk-theme/issues],
+    [https://github.com/umilab/umi-mx-gtk-theme/issues],
     [umi-mx-gtk-theme],
-    [https://github.com/umilinux/umi-mx-gtk-theme],
+    [https://github.com/umilab/umi-mx-gtk-theme],
     []
 )
 

@@ -58,7 +58,7 @@ Install the theme with the following commands
 
 If you want to install the latest version from git, clone the repository with
 
-    git clone https://github.com/umilinux/umi-mx-gtk-theme --depth 1 && cd umi-mx-gtk-theme
+    git clone https://github.com/umilab/umi-mx-gtk-theme --depth 1 && cd umi-mx-gtk-theme
 
 #### 2. Build and install the theme
 
@@ -121,7 +121,7 @@ If you get artifacts like black or invisible backgrounds under Unity, disable ov
 
 ## Bugs
 
-If you find a bug, please report it at https://github.com/umilinux/umi-mx-gtk-theme/issues
+If you find a bug, please report it at https://github.com/umilab/umi-mx-gtk-theme/issues
 
 ## License
 
@@ -130,7 +130,7 @@ UMI MX is available under the terms of the GPL-3.0. See `COPYING` for details.
 ## Full Preview
 
 ![A full screenshot of the Arc theme](http://tnga.github.io/sharedbazar/_assets/images/umi-mvx-lde-screenshot-20190508155116.png)
-<sub>Screenshot Details: Icons: [Arc](https://github.com/umilinux/umi-mvx-icons) | [Wallpaper](https://wallpapers.cimiro.com/wp-content/uploads/sites/4/2019/01/background-beach-beautiful-207135-1.jpg) | Font: Futura Bk bt</sub>
+<sub>Screenshot Details: Icons: [Arc](https://github.com/umilab/umi-mvx-icons) | [Wallpaper](https://wallpapers.cimiro.com/wp-content/uploads/sites/4/2019/01/background-beach-beautiful-207135-1.jpg) | Font: Futura Bk bt</sub>
 
 ### Credits
 
