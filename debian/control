@@ -1,0 +1,21 @@
+Source: umi-mx-gtk-theme
+Section: x11
+Priority: optional
+Maintainer: UMI Packages Builder <packages@umilab.org>
+Standards-Version: 3.9.8
+Build-Depends:
+ debhelper (>= 9),
+ gtk-update-icon-cache,
+ x11-apps,
+ pkg-config,
+ sassc,
+ inkscape,
+ optipng,
+ python3,
+ libgtk-3-dev
+
+Package: umi-mx-gtk-theme
+Architecture: all
+Suggests: umi-mx-icon-theme
+Depends: ${misc:Depends}
+Description: UMI Moon X design GTK+ theme
