@@ -1,28 +1,28 @@
-# UMI ArcX Theme
+# UMI MX Theme
 
-UMI ArcX a flat theme with transparent elements, base on Arc theme and Flatabulous window controls with "X" picked design, for GTK 3, GTK 2 and GNOME Shell which supports GTK 3 and GTK 2 based desktop environments like GNOME, Unity, Budgie, Pantheon, Xfce, MATE, etc.
+UMI MX a flat theme with transparent elements, base on Arc theme and Flatabulous window controls with "X" picked design, for GTK 3, GTK 2 and GNOME Shell which supports GTK 3 and GTK 2 based desktop environments like GNOME, Unity, Budgie, Pantheon, Xfce, MATE, etc.
 
-## UMI ArcX is available in three variants
+## UMI MX is available in three variants
 
-### UMI-arcX
+### UMI-MX
 
-![A screenshot of the UMI ArcX theme](http://tnga.github.io/sharedbazar/_assets/images/umi-mvx-screenshot-20190508153236.png)
+![A screenshot of the UMI MX theme](http://tnga.github.io/sharedbazar/_assets/images/umi-mvx-screenshot-20190508153236.png)
 
-### UMI-arcX-Darker
+### UMI-MX-Darker
 
-![A screenshot of the UMI ArcX-Darker theme](http://tnga.github.io/sharedbazar/_assets/images/umi-mvx-dr-screenshot-20190508153542.png)
+![A screenshot of the UMI MX-Darker theme](http://tnga.github.io/sharedbazar/_assets/images/umi-mvx-dr-screenshot-20190508153542.png)
 
-### UMI-arcX-Dark
+### UMI-MX-Dark
 
-![A screenshot of the UMI ArcX-Dark theme](http://tnga.github.io/sharedbazar/_assets/images/umi-mvx-d-screenshot-20190508153627.png)
+![A screenshot of the UMI MX-Dark theme](http://tnga.github.io/sharedbazar/_assets/images/umi-mvx-d-screenshot-20190508153627.png)
 
 ### Manual Installation
 
 **Important:** Remove all older versions of the theme from your system before you proceed any further.
 
-    sudo rm -rf /usr/share/themes/{umi-arcx,umi-arcx-darker,umi-arcx-dark,umi-arcx-solid,umi-arcx-darker-solid,umi-arcx-dark-solid}
-    rm -rf ~/.local/share/themes/{umi-arcx,umi-arcx-darker,umi-arcx-dark,umi-arcx-solid,umi-arcx-darker-solid,umi-arcx-dark-solid}
-    rm -rf ~/.themes/{umi-arcx,umi-arcx-darker,umi-arcx-dark,umi-arcx-solid,umi-arcx-darker-solid,umi-arcx-dark-solid}
+    sudo rm -rf /usr/share/themes/{umi-mx,umi-mx-darker,umi-mx-dark,umi-mx-solid,umi-mx-darker-solid,umi-mx-dark-solid}
+    rm -rf ~/.local/share/themes/{umi-mx,umi-mx-darker,umi-mx-dark,umi-mx-solid,umi-mx-darker-solid,umi-mx-dark-solid}
+    rm -rf ~/.themes/{umi-mx,umi-mx-darker,umi-mx-dark,umi-mx-solid,umi-mx-darker-solid,umi-mx-dark-solid}
 
 To build the theme the follwing packages are required
 
@@ -58,7 +58,7 @@ Install the theme with the following commands
 
 If you want to install the latest version from git, clone the repository with
 
-    git clone https://github.com/umilinux/umi-arcx-theme --depth 1 && cd umi-arcx-theme
+    git clone https://github.com/umilinux/umi-mx-gtk-theme --depth 1 && cd umi-mx-gtk-theme
 
 #### 2. Build and install the theme
 
@@ -68,9 +68,9 @@ If you want to install the latest version from git, clone the repository with
 Other options to pass to autogen.sh are
 
     --disable-transparency     disable transparency in the GTK3 theme
-    --disable-light            disable UMI ArcX Light support
-    --disable-darker           disable UMI ArcX Darker support
-    --disable-dark             disable UMI ArcX Dark support
+    --disable-light            disable UMI MX Light support
+    --disable-darker           disable UMI MX Darker support
+    --disable-dark             disable UMI MX Dark support
     --disable-cinnamon         disable Cinnamon support
     --disable-gnome-shell      disable GNOME Shell support
     --disable-gtk2             disable GTK2 support
@@ -85,9 +85,9 @@ Other options to pass to autogen.sh are
                                    Note: Normally the correct version is detected automatically
                                    and these options should not be needed.
 
-After the installation is complete the theme can be activated with `gnome-tweak-tool` or a similar program by selecting `UMI-ArcX`, `UMI-ArcX-Darker` or `UMI-ArcX-Dark` as Window/GTK+ theme and `UMI-ArcX` or `UMI-ArcX-Dark` as GNOME Shell/Cinnamon theme.
+After the installation is complete the theme can be activated with `gnome-tweak-tool` or a similar program by selecting `UMI-MX`, `UMI-MX-Darker` or `UMI-MX-Dark` as Window/GTK+ theme and `UMI-MX` or `UMI-MX-Dark` as GNOME Shell/Cinnamon theme.
 
-If the `--disable-transparency` option was used, the theme will be installed as `UMI-ArcX-solid`, `UMI-ArcX-Darker-solid` and `UMI-ArcX-Dark-solid`.
+If the `--disable-transparency` option was used, the theme will be installed as `UMI-MX-solid`, `UMI-MX-Darker-solid` and `UMI-MX-Dark-solid`.
 
 #### Uninstall the theme
 
@@ -97,11 +97,11 @@ Run
 
 from the same directory as this README resides in, or
 
-     sudo rm -rf /usr/share/themes/{umi-arcx,umi-arcx-darker,umi-arcx-dark,umi-arcx-solid,umi-arcx-darker-solid,umi-arcx-dark-solid}
+     sudo rm -rf /usr/share/themes/{umi-mx,umi-mx-darker,umi-mx-dark,umi-mx-solid,umi-mx-darker-solid,umi-mx-dark-solid}
 
 ### Extras
 
-### UMI ArcX KDE
+### UMI MX KDE
 
 A port of Arc for the Plasma 5 desktop with a few additions and extras. Available [here](https://github.com/PapirusDevelopmentTeam/arc-kde).
 
@@ -121,11 +121,11 @@ If you get artifacts like black or invisible backgrounds under Unity, disable ov
 
 ## Bugs
 
-If you find a bug, please report it at https://github.com/umilinux/umi-arcx-theme/issues
+If you find a bug, please report it at https://github.com/umilinux/umi-mx-gtk-theme/issues
 
 ## License
 
-UMI ArcX is available under the terms of the GPL-3.0. See `COPYING` for details.
+UMI MX is available under the terms of the GPL-3.0. See `COPYING` for details.
 
 ## Full Preview
 

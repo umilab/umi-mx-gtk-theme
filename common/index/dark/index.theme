@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=umi-arcx-dark
+Name=umi-mx-dark
 Comment=A flat theme with transparent elements and mac like window controls
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=umi-arcx-dark
-MetacityTheme=umi-arcx-dark
+GtkTheme=umi-mx-dark
+MetacityTheme=umi-mx-dark
 IconTheme=gnome
 CursorTheme=DMZ-Black
 ButtonLayout=menu:minimize,maximize,close

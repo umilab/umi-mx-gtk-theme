@@ -1,9 +1,9 @@
 AC_INIT(
-    [umi-arcx-theme],
+    [umi-mx-gtk-theme],
     [20180410],
-    [https://github.com/umilinux/umi-arcx-theme/issues],
-    [umi-arcx-theme],
-    [https://github.com/umilinux/umi-arcx-theme],
+    [https://github.com/umilinux/umi-mx-gtk-theme/issues],
+    [umi-mx-gtk-theme],
+    [https://github.com/umilinux/umi-mx-gtk-theme],
     []
 )
 
@@ -13,9 +13,9 @@ AM_INIT_AUTOMAKE([no-dist-gzip dist-xz foreign])
 AC_PROG_LN_S
 AC_PROG_MKDIR_P
 
-ARC_ENABLE([LIGHT],         [light],         [UMI ArcX Light],     [disable])
-ARC_ENABLE([DARKER],        [darker],        [UMI ArcX Darker],    [disable])
-ARC_ENABLE([DARK],          [dark],          [UMI ArcX Dark],      [disable])
+ARC_ENABLE([LIGHT],         [light],         [UMI MX Light],     [disable])
+ARC_ENABLE([DARKER],        [darker],        [UMI MX Darker],    [disable])
+ARC_ENABLE([DARK],          [dark],          [UMI MX Dark],      [disable])
 ARC_ENABLE([CINNAMON],      [cinnamon],      [Cinnamon],           [disable])
 ARC_ENABLE([GTK2],          [gtk2],          [GTK2],               [disable])
 ARC_ENABLE([GNOME_SHELL],   [gnome-shell],   [GNOME Shell],        [disable])
@@ -28,13 +28,13 @@ ARC_ENABLE([PLANK],         [plank],         [Plank theme],        [disable])
 ARC_ENABLE([OPENBOX],       [openbox],       [Openbox],            [disable])
 
 AS_IF([test "x$ENABLE_TRANSPARENCY" != xno], [
-    AC_SUBST([themedir], [${datadir}/themes/umi-arcx])
-    AC_SUBST([themedarkerdir], [${datadir}/themes/umi-arcx-darker])
-    AC_SUBST([themedarkdir], [${datadir}/themes/umi-arcx-dark])
+    AC_SUBST([themedir], [${datadir}/themes/umi-mx])
+    AC_SUBST([themedarkerdir], [${datadir}/themes/umi-mx-darker])
+    AC_SUBST([themedarkdir], [${datadir}/themes/umi-mx-dark])
 ], [
-    AC_SUBST([themedir], [${datadir}/themes/umi-arcx-solid])
-    AC_SUBST([themedarkerdir], [${datadir}/themes/umi-arcx-darker-solid])
-    AC_SUBST([themedarkdir], [${datadir}/themes/umi-arcx-dark-solid])
+    AC_SUBST([themedir], [${datadir}/themes/umi-mx-solid])
+    AC_SUBST([themedarkerdir], [${datadir}/themes/umi-mx-darker-solid])
+    AC_SUBST([themedarkdir], [${datadir}/themes/umi-mx-dark-solid])
 ])
 
 AS_IF([test "x$ENABLE_GTK3" != xno], [ARC_GTK3])

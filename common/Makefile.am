@@ -1,11 +1,11 @@
 if !ENABLE_TRANSPARENCY
-themedir        = $(datadir)/themes/umi-arcx-solid
-themedarkerdir  = $(datadir)/themes/umi-arcx-darker-solid
-themedarkdir    = $(datadir)/themes/umi-arcx-dark-solid
+themedir        = $(datadir)/themes/umi-mx-solid
+themedarkerdir  = $(datadir)/themes/umi-mx-darker-solid
+themedarkdir    = $(datadir)/themes/umi-mx-dark-solid
 else
-themedir        = $(datadir)/themes/umi-arcx
-themedarkerdir  = $(datadir)/themes/umi-arcx-darker
-themedarkdir    = $(datadir)/themes/umi-arcx-dark
+themedir        = $(datadir)/themes/umi-mx
+themedarkerdir  = $(datadir)/themes/umi-mx-darker
+themedarkdir    = $(datadir)/themes/umi-mx-dark
 endif
 
 if ENABLE_GTK2
